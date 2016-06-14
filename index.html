@@ -1,9 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <meta charset="utf-8">
 <head>
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+        }
+        #wrapper{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .flex-item{
+            background-color: antiquewhite;
+            margin: 5px;
+            padding: 20px;
+            border-radius: 7px;
+        }
+        header{
+            order: 1;
+            height: 100px;
+            flex: 0 1 100%;
+        }
+        nav{
+            order: 2;
+            flex: 0 1 200px;
+        }
+        main{
+            order: 3;
+            min-height: 400px;
+            min-width: 100px;
+            flex: 1;
+        }
+        aside{
+            order: 4;
+            flex: 0 1 200px;
+        }
+        footer{
+            order: 5;
+            height: 100px;
+            flex: 0 1 100%;
+        }
+        
+        @media screen and (max-width: 400px){
+            #wrapper{
+                flex-flow: column;
+            }
+            .flex-item{
+                background-color: #ECFFB8;
+            }
+        }
+    </style>
 </head>
 <body>
-    Wala lang. nabobore ako antagal tagal kasi eh. baka na joke time lang ako.
+    <div id="wrapper">
+        <header class="flex-item">header</header>
+        <nav class="flex-item">nav</nav>
+        <aside class="flex-item">aside</aside>
+        <main class="flex-item">main</main>
+        <footer class="flex-item">footer</footer>
+    </div><!--END OF div wrapper -->
 </body>
 </html>
