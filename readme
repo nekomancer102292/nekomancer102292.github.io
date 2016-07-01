@@ -3,6 +3,6 @@ readme..
 git commands
 
 1. go to folder for deployment to git. this would have the .git folder(hidden)
-2. issue : git add
+2. issue : git add .     --- git add and dot.
 3. issue : git commit -m "text here"
 4. issue : git push -u origin master 

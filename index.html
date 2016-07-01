@@ -1,69 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+<link rel="stylesheet" href="main.css">
+<script   src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
 <head>
-    <style>
-        body{
-            margin: 0;
-            text-align: center;
-        }
-        #wrapper{
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            flex-flow: row wrap;
-        }
-        .flex-item{
-            background-color: antiquewhite;
-            margin: 5px;
-            padding: 20px;
-            border-radius: 7px;
-        }
-        header{
-            order: 1;
-            height: 100px;
-            flex: 0 1 100%;
-        }
-        nav{
-            order: 2;
-            flex: 0 1 200px;
-        }
-        main{
-            order: 3;
-            min-height: 400px;
-            min-width: 100px;
-            flex: 1;
-        }
-        aside{
-            order: 4;
-            flex: 0 1 200px;
-        }
-        footer{
-            order: 5;
-            height: 100px;
-            flex: 0 1 100%;
-        }
-        
-        @media screen and (max-width: 400px){
-            #wrapper{
-                flex-flow: column;
-            }
-            .flex-item{
-                background-color: #ECFFB8;
-            }
-        }
-    </style>
+    <title>Controls design &lt;3</title>
 </head>
 <body>
-    <div id="wrapper">
-        <header class="flex-item">header</header>
-        <nav class="flex-item">nav</nav>
-        <aside class="flex-item">aside</aside>
-        <main class="flex-item">main</main>
-        <footer class="flex-item">footer</footer>
-    </div><!--END OF div wrapper -->
+    <div class="container">
+        <section class="row">
+            <h3>Hello this is a compilation.</h3>
+            <div class="thumbnail">
+                <h5>Hover Drop-down menu</h5>
+                <nav class="navbar navbar-default">
+                  <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Brand</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Link</a></li>
+                        <li id="liitemhover" class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                      </form>
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+            <div class="thumbnail">
+                <h5>Input Text : label on top</h5>
+                <fieldset>
+                    <label for="inptext1">Text</label>
+                    <input type="text" id="inpttext1" class="form-control">
+                </fieldset>
+                <h5>Input Text : label on side</h5>
+                <div class="form-inline">
+                    <fieldset>
+                        <label for="inptext1">Text</label>
+                        <input type="text" id="inpttext1" class="form-control">
+                    </fieldset>
+                </div>
+                <h5>Input Text : inside</h5>
+                <fieldset>
+                    <input type="text" id="inpttext1" class="form-control" placeholder="text here">
+                </fieldset>
+                
+            </div>
+            <div class="thumbnail">
+                <h5>Datepicker</h5>
+                <input type="text" id="datepicker">
+            </div>
+            <div class="thumbnail">
+                <h5>Tool tip hover<small> this need jquery ui and themes.</small></h5>
+                <label for="tooltipinp" data-toggle="tooltip">Text here: </label>
+                <input title="tooltip through title" type="text" id="tooltipinp" />
+                <dl>
+                  <dt>Coffee</dt>
+                  <dd>Black hot drink</dd>
+                  <dt>Milk</dt>
+                  <dd>White cold drink</dd>
+                </dl>
+                <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+            </div>
+        </section>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
