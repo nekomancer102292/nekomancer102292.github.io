@@ -1,0 +1,21 @@
+/***welcome page*/
+.welcome-container{
+    background-color: #f8b500;
+    border-radius: 20px;
+    font-family: 'Lobster', cursive;
+    font-size: 16px;
+    height: 80%;
+    margin: 10% auto;
+    padding: 20px;
+    text-align: justify;
+    width: 80%;
+}
+
+/***mobile*/
+@media only screen and (max-width: 414px) {
+
+    .welcome-container{
+        margin: 20px;
+        width: auto;
+    }
+}
